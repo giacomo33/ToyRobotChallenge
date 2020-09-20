@@ -1,0 +1,23 @@
+# Poorly formed PLACE command - should not be recognised
+echo expected output: Robot has not been placed
+PLACE0,0,NORTH
+MOVE
+REPORT
+VALIDATE 0,1,NORTH
+
+# Poorly formed PLACE command - should throw an exception as direction is missing
+echo expected output: Robot has not been placed
+PLACE 0,0
+LEFT
+REPORT
+VALIDATE 0,0,WEST
+
+# Poorly formed MOVE command
+echo expected output: 3,3,NORTH
+PLACE 1,2,EAST
+MOVEMOVE MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+VALIDATE 3,3,NORTH

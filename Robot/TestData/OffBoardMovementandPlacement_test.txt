@@ -1,0 +1,25 @@
+Test 1..Placement off the board
+echo Test 4 - Placement off the board
+echo Expected output: 2,4,WEST
+PLACE -2,0,WEST
+PLACE -4,-1,WEST
+PLACE -1,-2,WEST
+PLACE -2,-5,WEST
+PLACE 2,4,WEST
+REPORT
+VALIDATE 2,4,WEST
+echo 
+
+Test 2..Movement off the board
+echo Test 2 - Try to travel off the edge of the table
+echo Expected output: 0,3,WEST & 0,3,WEST
+PLACE 3,3,WEST
+MOVE MOVE MOVE MOVE
+REPORT
+VALIDATE 0,3,WEST
+# KEEP GOING....!
+MOVE MOVE MOVE MOVE MOVE MOVE MOVE MOVE MOVE
+REPORT
+VALIDATE 0,3,WEST
+echo 
+

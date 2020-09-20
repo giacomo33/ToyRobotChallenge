@@ -1,0 +1,28 @@
+
+# Test 1...
+echo Test 1 - Simple PLACE, MOVE, LEFT AND RIGHT commands
+echo Expected output: 1,4,NORTH
+PLACE 4,0,EAST
+LEFT
+LEFT
+MOVE MOVE MOVE
+RIGHT
+MOVE MOVE MOVE MOVE
+REPORT
+VALIDATE 1,4,NORTH
+echo 
+
+
+# Test2...Around the edge of the table
+echo Test 2 - Travel around the edge of the table
+echo Expected output: 4,4,EAST
+PLACE 3,0,NORTH
+LEFT
+MOVE MOVE MOVE
+RIGHT
+MOVE MOVE MOVE MOVE
+RIGHT
+MOVE MOVE MOVE MOVE
+REPORT
+VALIDATE 4,4,EAST
+echo 
